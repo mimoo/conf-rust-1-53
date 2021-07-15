@@ -8,21 +8,8 @@ build: [
   ["cargo" "--version"]
   ["cargo" "+1.53.0" "build"]
 ]
-depexts: [
-  ["cargo"] {os-distribution = "centos" & os-version >= "8"}
-  ["cargo"] {os-distribution = "ol" & os-version >= "8"}
-  ["cargo"] {os-distribution = "fedora"}
-  ["cargo"] {os-family = "suse"}
-  ["cargo"] {os-family = "debian"}
-  ["cargo"] {os-family = "ubuntu"}
-  ["cargo"] {os-distribution = "nixos"}
-  ["cargo"] {os-family = "alpine"}
-  ["rust"] {os-family = "arch"}
-  ["rust"] {os = "macos" & os-distribution = "homebrew"}
-]
-x-ci-accept-failures: [
-  "centos-7" # does not have cargo by default
-  "oraclelinux-7" # does not have cargo by default
+depends: [
+  "conf-rust-2018"
 ]
 synopsis: "Virtual package relying on cargo (rust build system)"
 description:
