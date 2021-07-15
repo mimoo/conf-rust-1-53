@@ -3,6 +3,7 @@ maintainer: "david@o1labs.org"
 authors: "David Wong"
 homepage: "https://github.com/mimoo/conf-rust-1-53"
 bug-reports: "https://github.com/mimoo/conf-rust-1-53/issues"
+dev-repo: "git+https://github.com/mimoo/conf-rust-1-53.git"
 license: "MIT"
 build: [
   ["cargo" "--version"]
